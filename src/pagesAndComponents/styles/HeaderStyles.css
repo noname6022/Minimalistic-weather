@@ -1,0 +1,47 @@
+.HeaderElementsContainer{
+    display: grid;
+    grid-template-columns: 12.3vw 23.3vw;
+    position: relative;
+    left: 6vw;
+    top: 5.5vh;
+    width: 36vw;
+    align-items: center;
+}
+
+.HeaderElementsContainer a{
+width: fit-content;
+height: fit-content;
+}
+
+.Logo{
+    width: 4.3vw;
+    height: 13vh;
+}
+
+.HeaderInputStyle{
+    background-color: #eeeeee !important;
+    display: grid;
+    align-items: center;
+    border: none;
+    height: 0;
+    border-radius: 4vh;
+    transition: all .2s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin-top: 0.4vmin;
+    padding: 2.46vmin;
+    text-align: inherit;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    /*width: fill-available;*/
+}
+
+.HeaderInputIcon{
+    background: url("../../media/SearchIcon.svg");
+    padding-left: 6.7vmin;
+    background-position: left;
+    background-size: 7vmin 3vmin;
+    background-repeat: no-repeat;
+    font-size: 1.25vw;
+}
+

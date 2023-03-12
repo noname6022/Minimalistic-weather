@@ -1,13 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  user-select: none;
+}
+html, body {
+  height: 100vh;
+
+
+  
+
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  outline: 0;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* App.tsx styles*/
+.HeaderElementsContainer{
+  display: grid;
+  grid-template-columns: 12.3vw 23.3vw;
+  position: relative;
+  left: 6vw;
+  top: 5.5vh;
+  width: 36vw;
+  align-items: center;
+}
+
+.HeaderElementsContainer a{
+width: fit-content;
+height: fit-content;
+}
+
+.Logo{
+  width: 4.3vw;
+  height: 13vh;
+}
+
+.HeaderInputStyle{
+  background-color: #eeeeee !important;
+  display: grid;
+  align-items: center;
+  border: none;
+  height: 0;
+  border-radius: 4vh;
+  transition: all .2s;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin-top: 0.4vmin;
+  padding: 2.46vmin;
+  text-align: inherit;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  /*width: fill-available;*/
+}
+
+.HeaderInputIcon{
+  background: url("./media/SearchIcon.svg");
+  padding-left: 6.7vmin;
+  background-position: left;
+  background-size: 7vmin 3vmin;
+  background-repeat: no-repeat;
+  font-size: 1.25vw;
+}
+
+.DateAndLocationContainer{
+  display: grid;
+  grid-template-columns: 25vw 16vw;
+  width: fit-content;
+  left: 5.6vw;
+  top: 11.1vmin;
+  position: relative;
+  align-items: center;
+  height: 12vh;
+}
+
+.LocationBlock{
+  display: grid;
+  grid-template-columns: 4vw 7vw;
+  align-items: center;
+}
+
+.LocationBlock h1{
+  margin-top: 2.9vmin !important;
+  margin: 0;
+  font-size: 2.1vw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.DateBlock{
+  display: grid;
+
+}
+
+.DateBlock h4{
+  font-size: 3.2vw;
+  margin: 0;
+  font-weight: 200;
+}
+
+.WeatherContainer{
+  display: grid;
+  top: 4vh;
+  left: 5.45vw;
+  position: relative;
+  width: fit-content;
+  align-items: center;
+  justify-items: start;
+  justify-content: start;
+}
+
+.WeatherText{
+  display: grid;
+  grid-template-rows: 33vmin 10vmin;
+  top: 6vmin;
+  position: relative;
+  align-items: center;
+}
+
+.WeatherTextContainer{
+  display: grid;
+  height: fit-content;
+}
+
+.WeatherTextContainer h1{
+  font-weight: 100;
+font-size: 17.7vw;
+margin: 0;
+height: fit-content;
+}
+
+
+
+.WeatherInfoContainer{
+  display: grid;
+}
+
+
+.WeatherInfoContainer h3{
+  font-size: 5.75vw;
+margin: 0;
+font-weight: 600;
+}
+
+
+
+.WeatherBackText{
+  font-weight: 100;
+  font-size: 44vw;
+  position: absolute;
+  color: #d9d9d9;
+  top: -13.34vw;
+  left: -0.5vw;
+  margin: 0 !important;
+  letter-spacing: 0vw;
+  height: fit-content;
+  z-index: -9999;
 }

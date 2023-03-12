@@ -1,0 +1,94 @@
+.DateAndLocationContainer{
+    display: grid;
+    grid-template-columns: 25vw 16vw;
+    width: fit-content;
+    left: 5.6vw;
+    top: 11.1vmin;
+    position: relative;
+    align-items: center;
+    height: 12vh;
+}
+
+.LocationBlock{
+    display: grid;
+    grid-template-columns: 4vw 7vw;
+    align-items: center;
+}
+
+.LocationBlock h1{
+    margin-top: 2.9vmin !important;
+    margin: 0;
+    font-size: 2.1vw;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.DateBlock{
+    display: grid;
+
+}
+
+.DateBlock h4{
+    font-size: 3.2vw;
+    margin: 0;
+    font-weight: 200;
+}
+
+.WeatherContainer{
+    display: grid;
+    top: 4vh;
+    left: 5.45vw;
+    position: relative;
+    width: fit-content;
+    align-items: center;
+    justify-items: start;
+    justify-content: start;
+}
+
+.WeatherText{
+    display: grid;
+    grid-template-rows: 33vmin 10vmin;
+    top: 6vmin;
+    position: relative;
+    align-items: center;
+}
+
+.WeatherTextContainer{
+    display: grid;
+    height: fit-content;
+}
+
+.WeatherTextContainer h1{
+    font-weight: 100;
+font-size: 17.7vw;
+margin: 0;
+height: fit-content;
+}
+
+
+
+.WeatherInfoContainer{
+    display: grid;
+}
+
+
+.WeatherInfoContainer h3{
+    font-size: 5.75vw;
+margin: 0;
+font-weight: 600;
+}
+
+
+
+.WeatherBackText{
+    font-weight: 100;
+    font-size: 44vw;
+    position: absolute;
+    color: #d9d9d9;
+    bottom: -54.34vmin;
+    left: -0.5vw;
+    margin: 0 !important;
+    letter-spacing: 0vw;
+    height: fit-content;
+    z-index: -9999;
+}
