@@ -14,6 +14,9 @@ const [city, setCity] = useState("Tbilisi");
 const [inputText, setInputText] = useState("");
 const [displayError, setError] = useState<boolean>(false);
 
+const closeModal = () => {
+  setError(false);
+}
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
   e.preventDefault();
@@ -39,6 +42,8 @@ axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api
 };
 */
 
+
+
 useEffect(() => {
 
 }, []);
@@ -46,5 +51,5 @@ useEffect(() => {
 // Search bar Logic block
 
 
-  return {date, month, year, setCity, apiKey, city, displayError, setError, weatherData, inputText, handleSubmit, setInputText, setWeatherData}
+  return {date, month, year, setCity, apiKey, city, closeModal, displayError, setError, weatherData, inputText, handleSubmit, setInputText, setWeatherData}
 }

@@ -86,18 +86,20 @@ height: fit-content;
 
 .DateAndLocationContainer{
   display: grid;
-  grid-template-columns: 25vw 16vw;
+  grid-template-columns: auto 17vw;
+  column-gap: 1.2vw;
   width: fit-content;
   left: 5.6vw;
   top: 11.1vmin;
   position: relative;
   align-items: center;
+  justify-items: end;
   height: 12vh;
 }
 
 .LocationBlock{
   display: grid;
-  grid-template-columns: 4vw 7vw;
+  grid-template-columns: 4vw max-content;
   align-items: center;
 }
 
@@ -107,6 +109,7 @@ height: fit-content;
   font-size: 2.1vw;
   font-weight: 600;
   white-space: nowrap;
+  width: fit-content;
 }
 
 .DateBlock{
@@ -178,3 +181,68 @@ font-weight: 600;
   height: fit-content;
   z-index: -9999;
 }
+
+
+/*error modal block!*/
+
+.ErrorModalWrapper{
+  display: grid;
+  position: fixed;
+  background: rgba(96, 96, 96, 0.76);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  z-index: 9999;
+}
+
+.ErrorModalTextInfo{
+  background-color: #fff;
+  border: 1vh;
+  height: 32vmin;
+  width: 42vw;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-items: start;
+  justify-content: center;
+  grid-template-rows: 5vmin 4vmin 9vmin 3vmin;
+}
+
+.ErrorModalTextInfo h1{
+font-size: 1.5vw;
+margin: 0;
+}
+
+.ErrorModalTextInfo h2{
+  font-size: 0.8vw;
+  margin: 0;
+  }
+
+  .ErrorModalTextInfo li{
+    font-size: 0.8vw;
+    margin: 0;
+    }
+  .ErrorModalTextInfo ol{
+    margin: 0;
+    padding: 0;
+    padding-left: 2vw;
+    display: grid;
+    justify-items: start;
+  }
+
+  .ErrorModalWrapper button{
+    background: none;
+    outline: unset;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -31.4vmin;
+    left: 69.7%;
+  }

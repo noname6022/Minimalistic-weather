@@ -4,35 +4,92 @@ import { Main } from './pagesAndComponents/Main';
 import {WeatherBackend} from "./pagesAndComponents/logic";
 import Logo from "./media/Logo";
 import LocationIcon from './media/LocationIcon';
+import CloseIcon from './media/CloseIcon';
+import WeatherIcons from './pagesAndComponents/styles/WeatherIcons';
 import axios from 'axios';
+import SunIcon from "./media/Sun";
+import PartCloudsDay from "./media/PartCloudsDay";
+import PartCloudsNight from "./media/PartCloudsNight";
+import ScClouds from "./media/ScClouds";
+import BrokenClouds from "./media/BrokenClouds";
+import RainIcon from "./media/Rain";
+import TunderStormIcon from "./media/TunderStorm";
+import SnowIcon from "./media/Snow";
+import MistIcon from "./media/Mist";
+import UnknownClouds from "./media/Unknown";
 
-function App() {
-  const {date, month, displayError, year, city, setCity, apiKey, weatherData, setWeatherData, handleSubmit} = WeatherBackend();
+  function App() {
+    const { date, month, displayError, year, closeModal, city, setCity, apiKey, weatherData, setWeatherData, handleSubmit } = WeatherBackend();
   useEffect(() => {
     const syntheticEvent = { preventDefault: () => {} } as React.FormEvent<HTMLFormElement>;
     handleSubmit(syntheticEvent);
   }, []);
+    const getWeatherIcon = (description, timeOfDay) => {
+        switch (description) {
+            case 'clear sky':
+                return <SunIcon />;
+            case 'few clouds':
+            case 'scattered clouds':
+                return timeOfDay === 'day' ? <PartCloudsDay /> : <PartCloudsNight />;
+            case 'broken clouds':
+                return <BrokenClouds />;
+            case 'shower rain':
+            case 'rain':
+                return <RainIcon />;
+            case 'thunderstorm':
+                return <TunderStormIcon />;
+            case 'snow':
+                return <SnowIcon />;
+            case 'mist':
+            case 'smoke':
+            case 'haze':
+            case 'dust':
+            case 'fog':
+            case 'sand':
+                return <MistIcon />;
+            default:
+                return <UnknownClouds />;
+        }
+    };
 
+    const currentTime = new Date().getHours();
+    const timeOfDay = currentTime >= 6 && currentTime < 18 ? 'day' : 'night';
 
-  return (
-    <>
-              <div className='HeaderElementsContainer'>
-            <a href='https://www.google.com'><Logo/></a>
-            <div>
-              <form onSubmit={handleSubmit}>
-                
-              
-                <input className="HeaderInputStyle HeaderInputIcon"
-                        placeholder='Enter city'
-                          
-                        type="text"
-                        value={city}
-                        onChange={(e) => setCity(e.target.value)}/>
-
-                      </form>
+    return (
+        <>
+            <div className='HeaderElementsContainer'>
+                <a href='https://www.google.com'><Logo/></a>
+                <div>
+                    <form onSubmit={handleSubmit}>
+                        <input className="HeaderInputStyle HeaderInputIcon"
+                            placeholder='Enter city'
+                            type="text"
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)}/>
+                    </form>
                 </div>
-              </div>
-      {displayError && <h1>Error: City not found</h1>}
+            </div>
+            { displayError && 
+                <div className='ErrorModalWrapper' onClick={closeModal}>
+                <div className='ErrorModalTextInfo'>
+                    <div><h1>Error!</h1></div>
+                    <div><h2>There could be several reasons...</h2></div>
+          <div>
+            <ol>
+              <li> Issues with the server and databases.</li>
+              <li> The city you entered may not exist or may have been entered incorrectly.</li>
+              <li> An invalid value may have been entered.</li>
+            </ol>
+          </div>
+          <div>
+            <h2>To exit, press on the cross button or click an empty area.</h2>
+          </div>
+        </div>
+        <button onClick={closeModal}><CloseIcon/></button>
+
+      </div>
+
+      }
       
       { weatherData && (
         <div>
@@ -55,13 +112,13 @@ function App() {
             <div className='WeatherInfoContainer'>
             <h3>{weatherData.weather[0].description}</h3>
             </div>
+            <div className='WeatherIcon'>
+                        {getWeatherIcon(weatherData.weather[0].description, timeOfDay)}
+                    </div>
           </div>
             <h2 className='WeatherBackText'>
             {Math.round(weatherData.main.temp)}°C
             </h2>
-            <div>
-            <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="imgicon"/>
-            </div>
 
         </div>
        </div>
