@@ -69,7 +69,7 @@ import UnknownClouds from "./media/Unknown";
     return (
         <>
             <div className='HeaderElementsContainer'>
-                <a href='https://www.google.com'><Logo/></a>
+                <a href='https://minw.netlify.app'><Logo/></a>
                 <div>
                     <form onSubmit={handleSubmit}>
                         <input className="HeaderInputStyle HeaderInputIcon"
