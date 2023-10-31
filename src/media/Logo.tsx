@@ -5,6 +5,10 @@ export const Logo = () => {
   const Svg = styled.svg`
         width: 4.3vw;
     height: 13vh;
+    @media (max-width: 480px) {
+      width: 11.3vw;
+    height: 10vh;
+    }
   `
   return (
     <Svg width="61" height="106" viewBox="0 0 61 106" fill="none" xmlns="http://www.w3.org/2000/svg">

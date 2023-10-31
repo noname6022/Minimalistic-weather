@@ -3,8 +3,19 @@ import styled from 'styled-components';
 
 export const PartCloudsNight = () => {
   const Svg = styled.svg`
-        width: 4.3vw;
-    height: 13vh;
+    width: 55.3vw;
+    height: 57vh;
+    top: 1vmin;
+    right: 2vw;
+    position: absolute;
+    z-index: -1;
+    @media (max-width: 480px){
+      width: 96.3vw;
+    height: 43vh;
+    top: 34vmin;
+    left: -21vw;
+    position: absolute;
+    }
   `
   return (
 <Svg width="815" height="482" viewBox="0 0 815 482" fill="none" xmlns="http://www.w3.org/2000/svg">

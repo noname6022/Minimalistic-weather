@@ -1,8 +1,19 @@
 import React from 'react'
 import styled from 'styled-components';
   const Svg = styled.svg`
-        width: 4.3vw;
-    height: 13vh;
+    width: 44.3vw;
+    height: 79vh;
+    top: 11.5vmin;
+    right: 6vw;
+    position: absolute;
+    z-index: -1;
+    @media (max-width: 480px){
+      width: 84.3vw;
+      height: 77vmin;
+    top: 38vmin;
+    left: -21vw;
+    position: absolute;
+    }
   `
 export const SnowIcon = () => {
   return (

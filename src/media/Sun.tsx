@@ -4,8 +4,18 @@ import styled from 'styled-components';
 
 export const SunIcon = () => {
   const Svg = styled.svg`
-        width: 4.3vw;
-    height: 13vh;
+    width: 52.3vw;
+    height: 90vh;
+    top: -24vmin;
+    right: -10vw;
+    position: absolute;
+    @media (max-width: 480px){
+      width: 90.3vw;
+    height: 87vmin;
+    top: 32.4vmin;
+    left: -23vw;
+    position: absolute;
+    }
   `
   return (
 <Svg width="884" height="884" viewBox="0 0 884 884" fill="none" xmlns="http://www.w3.org/2000/svg">

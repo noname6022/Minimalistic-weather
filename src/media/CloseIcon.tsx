@@ -10,6 +10,16 @@ export const CloseIcon = () => {
     margin: 0;
     padding: 0;
     border: 0;
+
+    @media (max-width: 480px){
+    width: 11.3vw;
+    height: 5vh;
+    background: none;
+    outline: unset;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    }
         `
 
   return (

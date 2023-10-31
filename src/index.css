@@ -174,7 +174,7 @@ font-weight: 600;
   font-size: 44vw;
   position: absolute;
   color: #d9d9d9;
-  top: -13.34vw;
+  top: -15.34vw;
   left: -0.5vw;
   margin: 0 !important;
   letter-spacing: 0vw;
@@ -246,3 +246,189 @@ margin: 0;
     margin-top: -31.4vmin;
     left: 69.7%;
   }
+
+  .WeatherIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (max-width: 480px) {
+  html, body {
+    height: 115vh;
+    position: absolute;
+}
+  .HeaderElementsContainer {
+    display: grid;
+    grid-template-columns: 18.3vw 61.3vw;
+    position: relative;
+    left: 11vw;
+    top: 2.5vh;
+    width: 82vw;
+    align-items: center;
+}
+
+.HeaderInputStyle {
+  background-color: #eeeeee !important;
+  display: grid;
+  align-items: center;
+  border: none;
+  height: 0;
+  border-radius: 4vh;
+  transition: all .2s;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin-top: 3.4vmin;
+  padding: 4.46vmin;
+  text-align: inherit;
+  width: -webkit-fill-available;
+  outline: none;
+}
+  .HeaderInputIcon {
+    padding-left: 10.7vmin;
+    background-position: left;
+    background-size: 11vmin 5vmin;
+    background-repeat: no-repeat;
+    font-size: 4.25vw;
+}
+
+.WeatherContainer {
+  left: 0;
+  top: 123vmin;
+}
+
+.WeatherText {
+  display: grid;
+  grid-template-rows: 33vmin 10vmin;
+  top: 0;
+  width: 100vw;
+  position: relative;
+  align-items: center;
+  text-align: center;
+}
+
+.WeatherTextContainer h1 {
+  font-weight: 100;
+  font-size: 31.7vw;
+  margin: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.WeatherBackText {
+  font-weight: 100;
+  font-size: 39vw;
+  position: absolute;
+  color: #d9d9d9;
+  top: -20.34vw;
+  left: 5vw;
+  margin: 0 !important;
+  letter-spacing: 0vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: -9999;
+}
+
+.WeatherInfoContainer {
+  display: grid;
+  margin-top: 6.8vmin;
+}
+
+.WeatherInfoContainer h3 {
+  font-size: 9.75vw;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.DateAndLocationContainer {
+  display: grid;
+  grid-template-columns: auto 56vw;
+  column-gap: 1.2vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 10.3vw;
+  top: 119vmin;
+  position: absolute;
+  justify-items: end;
+  height: 11vh;
+  align-items: center;
+}
+
+.DateBlock {
+  display: grid;
+  height: 7vmin;
+}
+
+.DateBlock h4 {
+  font-size: 5.55vw;
+  margin: 0;
+  font-weight: 200;
+}
+
+.LocationBlock h1 {
+  margin-top: 4.9vmin !important;
+  margin: 0;
+  font-size: 4.1vw;
+  font-weight: 600;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.LocationBlock {
+  display: grid;
+  grid-template-columns: 8vw max-content;
+  align-items: center;
+}
+
+.ErrorModalTextInfo {
+  background-color: #fff;
+  border: 1vh;
+  height: 46vmin;
+  width: 73vw;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-items: start;
+  justify-content: center;
+  grid-template-rows: 13vmin 6vmin 12vmin 5vmin;
+}
+
+.ErrorModalTextInfo h1 {
+  font-size: 7.5vw;
+  margin: 0;
+}
+
+.ErrorModalTextInfo h2 {
+  font-size: 2.3vw;
+  margin: 0;
+}
+
+.ErrorModalTextInfo ol {
+  margin: 0;
+  padding: 0;
+  padding-left: 3vw;
+  display: grid;
+  justify-items: start;
+}
+
+.ErrorModalTextInfo li {
+  font-size: 1.8vw;
+  margin: 0;
+}
+
+.ErrorModalWrapper button {
+  background: none;
+  outline: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  margin-top: -44.4vmin;
+  left: 80.7%;
+}
+
+  
+}

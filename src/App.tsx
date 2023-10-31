@@ -27,13 +27,17 @@ import UnknownClouds from "./media/Unknown";
     const getWeatherIcon = (description, timeOfDay) => {
         switch (description) {
             case 'clear sky':
-                return <SunIcon />;
+                return  <SunIcon />;
             case 'few clouds':
+              return timeOfDay === 'day' ? <PartCloudsDay /> : <PartCloudsNight />  ;
             case 'scattered clouds':
-                return timeOfDay === 'day' ? <PartCloudsDay /> : <PartCloudsNight />;
+              return <ScClouds/>;
             case 'broken clouds':
                 return <BrokenClouds />;
+              case 'light rain':
+                return <RainIcon />;
             case 'shower rain':
+              return <RainIcon />;
             case 'rain':
                 return <RainIcon />;
             case 'thunderstorm':
@@ -41,14 +45,21 @@ import UnknownClouds from "./media/Unknown";
             case 'snow':
                 return <SnowIcon />;
             case 'mist':
+              return  <MistIcon/>;
             case 'smoke':
+              return <BrokenClouds />;
             case 'haze':
+              return <MistIcon/>;
             case 'dust':
+              return <MistIcon/>;
             case 'fog':
+              return <MistIcon/>;
             case 'sand':
                 return <MistIcon />;
+                case 'overcast clouds':
+                  return timeOfDay === 'day' ? <PartCloudsDay /> : <PartCloudsNight />;
             default:
-                return <UnknownClouds />;
+                return  <UnknownClouds /> ;
         }
     };
 
@@ -90,9 +101,9 @@ import UnknownClouds from "./media/Unknown";
       </div>
 
       }
-      
+
       { weatherData && (
-        <div>
+        <div>      
         <div className='DateAndLocationContainer'>
             <div className='LocationBlock'>
                 <LocationIcon/>
@@ -112,15 +123,17 @@ import UnknownClouds from "./media/Unknown";
             <div className='WeatherInfoContainer'>
             <h3>{weatherData.weather[0].description}</h3>
             </div>
-            <div className='WeatherIcon'>
-                        {getWeatherIcon(weatherData.weather[0].description, timeOfDay)}
-                    </div>
-          </div>
+
             <h2 className='WeatherBackText'>
             {Math.round(weatherData.main.temp)}°C
             </h2>
 
-        </div>
+        </div>            
+
+          </div>       
+           <div className='WeatherIcon'>
+                        {getWeatherIcon(weatherData.weather[0].description, timeOfDay)}
+                    </div>
        </div>
  )}
    

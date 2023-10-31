@@ -5,8 +5,19 @@ import styled from 'styled-components';
 
 export const RainIcon = () => {
   const Svg = styled.svg`
-        width: 4.3vw;
-    height: 13vh;
+    width: 47.3vw;
+    height: 86vh;
+    top: 4.5vmin;
+    right: 2vw;
+    position: absolute;
+    z-index: -1;
+    @media (max-width: 480px){
+      width: 96.3vw;
+      height: 78vmin;
+    top: 38vmin;
+    left: -21vw;
+    position: absolute;
+    }
   `
 
   return (

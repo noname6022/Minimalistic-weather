@@ -4,8 +4,19 @@
 import React from 'react'
 import styled from 'styled-components';
   const Svg = styled.svg`
-        width: 4.3vw;
-    height: 13vh;
+    width: 55.3vw;
+    height: 57vh;
+    top: 1.5vmin;
+    right: 2vw;
+    position: absolute;
+    z-index: -1;
+    @media (max-width: 480px){
+      width: 96.3vw;
+    height: 43vh;
+    top: 34vmin;
+    left: -21vw;
+    position: absolute;
+    }
   `
 export const BrokenClouds = () => {
   return (

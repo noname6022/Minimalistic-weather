@@ -92,3 +92,7 @@ font-weight: 600;
     height: fit-content;
     z-index: -9999;
 }
+
+.WeatherIcon{
+    position: absolute;
+}

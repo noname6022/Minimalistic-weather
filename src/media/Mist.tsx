@@ -4,8 +4,19 @@ import styled from 'styled-components';
 
 export const MistIcon = () => {
   const Svg = styled.svg`
-        width: 4.3vw;
-    height: 13vh;
+    width: 54.3vw;
+    height: 67vh;
+    top: 7.5vmin;
+    right: 4vw;
+    position: absolute;
+    z-index: -1;
+    @media (max-width: 480px){
+      width: 96.3vw;
+    height: 43vh;
+    top: 34vmin;
+    left: -21vw;
+    position: absolute;
+    }
   `
   return (
 
